@@ -94,7 +94,7 @@ export const Hero = () => {
           </a>
         </div>
 
-        <div className="flex justify-center gap-6">
+        {/* <div className="flex justify-center gap-6">
           <a
             href="https://github.com"
             target="_blank"
@@ -117,15 +117,15 @@ export const Hero = () => {
           >
             <Mail className="w-6 h-6" />
           </a>
-        </div>
+        </div> */}
       </div>
 
-      <button
+      {/* <button
         onClick={scrollToNext}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-cyan-400 animate-bounce cursor-pointer hover:text-cyan-300 transition-colors"
       >
         <ChevronDown className="w-8 h-8" />
-      </button>
+      </button> */}
     </section>
   );
 };

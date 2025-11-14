@@ -21,3 +21,15 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Large assets
+Logo.png
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+# Add back specific small images if needed
+!public/**/*.png
+!public/**/*.jpg
+!public/**/*.svg
