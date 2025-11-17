@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Mail, Github, Linkedin, Twitter, Instagram, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, ArrowUpRight, Sparkles } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export const Contact = () => {
@@ -12,28 +12,28 @@ export const Contact = () => {
       icon: Github,
       url: 'https://github.com/Naman-ap',
       description: 'Check out my code',
-      color: 'hover:text-gray-300 hover:bg-gray-800/30',
+      color: 'hover:text-green-300 hover:bg-green-500/10',
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
       url: 'https://www.linkedin.com/in/naman-chawla-128160229/',
-      description: 'Let\'s connect professionally',
-      color: 'hover:text-blue-400 hover:bg-blue-500/10',
+      description: "Let's connect professionally",
+      color: 'hover:text-green-300 hover:bg-green-500/10',
     },
     {
       name: 'Twitter',
       icon: Twitter,
       url: 'https://x.com/Namancpp',
       description: 'Follow my thoughts',
-      color: 'hover:text-blue-400 hover:bg-blue-500/10',
+      color: 'hover:text-green-300 hover:bg-green-500/10',
     },
     {
       name: 'Peerlist',
-      icon: Instagram,
+      icon: null,
       url: 'https://peerlist.io/naman10ap',
       description: 'My professional profile',
-      color: 'hover:text-green-400 hover:bg-green-500/10',
+      color: 'hover:text-green-300 hover:bg-green-500/10',
     },
   ];
 
@@ -77,23 +77,23 @@ export const Contact = () => {
               : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-6">
-                <div className="p-4 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl">
-                  <Mail className="w-8 h-8 text-cyan-400" />
+          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex items-center gap-4 sm:gap-6">
+                <div className="p-3 sm:p-4 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl">
+                  <Mail className="w-7 h-7 sm:w-8 sm:h-8 text-cyan-400" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Drop me an email</h3>
-                  <p className="text-gray-400">I usually respond within 24 hours</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-2">Drop me an email</h3>
+                  <p className="text-gray-400 text-sm sm:text-base">I usually respond within 24 hours</p>
                 </div>
               </div>
               <a
                 href="mailto:namanchawla72@gmail.com"
-                className="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105"
+                className="group mt-2 sm:mt-0 inline-flex items-center justify-center gap-2 sm:gap-3 px-4 py-3 sm:px-6 sm:py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white text-sm sm:text-base hover:shadow-lg hover:shadow-cyan-500/50 transition-all hover:scale-105 w-full sm:w-auto"
               >
-                <span>namanchawla72@gmail.com</span>
-                <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform" />
+                <span className="truncate">namanchawla72@gmail.com</span>
+                <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-45 transition-transform" />
               </a>
             </div>
           </div>
@@ -101,7 +101,7 @@ export const Contact = () => {
 
         {/* Social Links Grid */}
         <div
-          className={`grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-1000 delay-400 ${
+          className={`grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 transition-all duration-1000 delay-400 ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10'
@@ -115,22 +115,26 @@ export const Contact = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 ${social.color} hover:scale-105`}
+                className={`group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-gray-700/50 hover:border-green-400/70 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/20 ${social.color} hover:scale-105`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl group-hover:scale-110 transition-transform">
-                      <Icon className="w-6 h-6" />
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="p-2.5 sm:p-3 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl group-hover:scale-110 transition-transform flex items-center justify-center min-w-[2.5rem] min-h-[2.5rem]">
+                      {Icon ? (
+                        <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-green-300" />
+                      ) : (
+                        <span className="text-base sm:text-lg font-bold text-green-400">P</span>
+                      )}
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                      <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-green-400 transition-colors">
                         {social.name}
                       </h3>
-                      <p className="text-gray-400 text-sm">{social.description}</p>
+                      <p className="text-gray-400 text-xs sm:text-sm">{social.description}</p>
                     </div>
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 group-hover:rotate-45 transition-all" />
+                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-green-400 group-hover:rotate-45 transition-all" />
                 </div>
               </a>
             );
@@ -139,15 +143,15 @@ export const Contact = () => {
 
         {/* Call to Action */}
         <div
-          className={`mt-16 text-center transition-all duration-1000 delay-600 ${
+          className={`mt-12 sm:mt-16 text-center transition-all duration-1000 delay-600 ${
             isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Whether you want to discuss a project, collaborate on something awesome, or just chat about technology, 
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-6 sm:p-8 border border-cyan-500/20">
+            <p className="text-gray-300 text-sm sm:text-lg leading-relaxed">
+              Whether you want to discuss a project, collaborate on something awesome, or just chat about technology,
               I'm always excited to connect with fellow creators and innovators!
             </p>
           </div>
